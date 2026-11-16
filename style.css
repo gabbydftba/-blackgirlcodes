@@ -1,0 +1,471 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Oswald:wght@200;300;400&display=swap');
+
+:root {
+    --black: #050505;
+    --white: #f7f7f4;
+    --mint: #d8f8ce;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: var(--black);
+    color: var(--white);
+    font-family: 'DM Sans', Arial, sans-serif;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* HEADER */
+
+.site-header {
+    min-height: 112px;
+    padding: 22px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+    color: #171717;
+}
+
+.wordmark {
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: .22em;
+}
+
+.wordmark span {
+    display: block;
+    font-size: .55rem;
+    letter-spacing: .28em;
+    margin-top: 6px;
+}
+
+.main-nav {
+    display: flex;
+    gap: 28px;
+    font-size: .75rem;
+    letter-spacing: .13em;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+
+/* GENERAL SECTIONS */
+
+.dark-section {
+    background: var(--black);
+    color: white;
+}
+
+.light-section {
+    background: #e9e9e5;
+    color: #111;
+}
+
+
+/* NUMBERED SECTIONS */
+
+.step-number {
+    position: absolute;
+    top: 16px;
+    left: 4%;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 200;
+    font-size: 5rem;
+}
+
+
+/* BOOKING SECTION */
+
+.intro {
+    min-height: 360px;
+    position: relative;
+    padding: 72px 7%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-stack {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 42px;
+    width: min(100%, 620px);
+}
+
+
+/* MINT BUTTONS */
+
+.mint-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--mint);
+    color: black;
+    border-radius: 15px;
+    padding: 19px 34px;
+    min-height: 72px;
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-align: center;
+    transition: .3s;
+}
+
+.mint-button:hover {
+    transform: translateY(-3px);
+    background: #c8f0bd;
+}
+
+.wide-button {
+    width: 100%;
+}
+
+
+/* PHOTO AREAS */
+
+.feature-photo {
+    height: 680px;
+    position: relative;
+    background: #303030;
+}
+
+.feature-photo img,
+.process-photo img,
+.small-photo img,
+.portfolio-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.photo-placeholder {
+    display: none;
+    width: 100%;
+    height: 100%;
+    min-height: 240px;
+    place-items: center;
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(135deg, #292929, #555);
+    color: white;
+    font-size: .9rem;
+    letter-spacing: .12em;
+}
+
+
+/* PROCESS SECTIONS */
+
+.process-section {
+    min-height: 500px;
+    position: relative;
+    padding: 105px 7% 70px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5%;
+    align-items: center;
+}
+
+.process-copy {
+    text-align: center;
+}
+
+.process-copy h2 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+    font-size: 4rem;
+    line-height: 1.08;
+}
+
+.process-photo {
+    height: 390px;
+    background: #333;
+}
+
+.process-copy p {
+    line-height: 1.7;
+}
+
+
+/* TEXT LINKS */
+
+.text-link {
+    display: inline-block;
+    margin-top: 14px;
+    padding-bottom: 7px;
+    border-bottom: 1px solid currentColor;
+}
+
+
+/* CONTRACT SECTION */
+
+.shoot-section {
+    grid-template-columns: .8fr 1.2fr;
+}
+
+.contract-note {
+    font-size: .8rem;
+    letter-spacing: .12em;
+    font-weight: 600;
+    margin: 28px 0;
+}
+
+
+/* SHOOT PHOTO GALLERY */
+
+.shoot-gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.small-photo {
+    height: 220px;
+    background: #333;
+}
+
+.small-photo:first-child {
+    grid-row: span 2;
+    height: 452px;
+}
+
+
+/* FINAL BOOKING */
+
+.final-cta {
+    text-align: center;
+    padding: 100px 20px;
+    background: #111;
+}
+
+.final-cta h2 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+    font-size: 3.5rem;
+}
+
+.final-cta .text-link {
+    display: table;
+    margin: 25px auto;
+}
+
+
+/* FOOTER */
+
+.site-footer {
+    padding: 30px 5%;
+    display: flex;
+    justify-content: space-between;
+    gap: 18px;
+    color: #aaa;
+    font-size: .7rem;
+    letter-spacing: .13em;
+}
+
+.site-footer a {
+    color: white;
+    font-weight: 700;
+}
+
+
+/* PORTFOLIO PAGES */
+
+.page-heading {
+    padding: 100px 8%;
+    text-align: center;
+}
+
+.page-heading h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 8rem;
+    font-weight: 200;
+    margin: 20px 0;
+}
+
+.eyebrow {
+    letter-spacing: .25em;
+    font-size: .7rem;
+}
+
+.year-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: #555;
+}
+
+.year-card {
+    min-height: 340px;
+    background: #111;
+    padding: 34px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: .3s;
+}
+
+.year-card:hover {
+    background: #292929;
+}
+
+.year-card strong {
+    font-family: 'Oswald', sans-serif;
+    font-size: 7rem;
+    font-weight: 200;
+}
+
+
+/* YEARLY PHOTO GALLERIES */
+
+.portfolio-grid {
+    padding: 28px 4% 70px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.portfolio-image {
+    height: 550px;
+    background: #333;
+}
+
+
+/* YEAR NAVIGATION */
+
+.archive-navigation {
+    padding: 0 5% 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.archive-navigation > div {
+    display: flex;
+    gap: 10px;
+}
+
+.year-chip {
+    border: 1px solid #777;
+    padding: 10px 15px;
+}
+
+.year-chip.active {
+    background: var(--mint);
+    color: black;
+}
+
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 720px) {
+
+    .site-header {
+        min-height: 90px;
+        justify-content: center;
+    }
+
+    .wordmark {
+        font-size: 1rem;
+    }
+
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        left: 16px;
+        background: none;
+        border: none;
+        font-size: 2rem;
+        color: black;
+    }
+
+    .main-nav {
+        display: none;
+        position: absolute;
+        z-index: 5;
+        top: 90px;
+        left: 0;
+        right: 0;
+        padding: 22px;
+        background: white;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .main-nav.open {
+        display: flex;
+    }
+
+    .intro {
+        min-height: 330px;
+        padding: 85px 7%;
+    }
+
+    .mint-button {
+        min-height: 62px;
+        font-size: 1.1rem;
+    }
+
+    .feature-photo {
+        height: 450px;
+    }
+
+    .process-section,
+    .shoot-section {
+        grid-template-columns: 1fr;
+        padding: 100px 7% 55px;
+        gap: 30px;
+    }
+
+    .process-copy h2 {
+        font-size: 3rem;
+    }
+
+    .process-photo {
+        height: 330px;
+    }
+
+    .year-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .year-card {
+        min-height: 230px;
+    }
+
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .portfolio-image {
+        height: 450px;
+    }
+
+    .page-heading h1 {
+        font-size: 5rem;
+    }
+
+    .site-footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+}
