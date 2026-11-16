@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Poux Productions | Portrait Photographer</title>
+    <title>Pre-Shoot Questionnaire | Poux Productions</title>
 
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -18,191 +19,240 @@
         <span>PORTRAIT PHOTOGRAPHER</span>
     </a>
 
-    <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
-
-    <nav class="main-nav">
-        <a href="index.html">HOME</a>
-        <a href="portfolio.html">PORTFOLIO</a>
-        <a href="#booking">BOOK NOW</a>
-    </nav>
-
 </header>
 
 
-<main>
+<main class="questionnaire-container">
 
-    <!-- SECTION 1: BOOKING -->
+    <div class="questionnaire-heading">
 
-    <section class="intro dark-section" id="booking">
+        <p class="eyebrow">POUX PRODUCTIONS</p>
 
-        <div class="step-number">1</div>
+        <h1>PRE-SHOOT<br>QUESTIONNAIRE</h1>
 
-        <div class="button-stack">
+        <p>
+            Let's get to know you and your vision.
+            Please complete this questionnaire before your session
+            so we can create something unforgettable.
+        </p>
 
-            <a href="#" class="mint-button">
-                BOOK NOW
-            </a>
-
-            <a href="#" class="mint-button wide-button">
-                PRE-SHOOT QUESTIONNAIRE
-            </a>
-
-        </div>
-
-    </section>
+    </div>
 
 
-    <!-- MAIN FEATURED PHOTO -->
+    <form id="shootForm">
 
-    <section class="feature-photo">
+        <!-- FIRST NAME -->
 
-        <!-- ADD YOUR MAIN PHOTO HERE -->
-        <img src="assets/images/home-hero.jpg"
-             alt="Featured portrait photography">
+        <div class="form-group">
 
-        <div class="photo-placeholder">
-            ADD YOUR FEATURED PHOTO HERE
-            <small>home-hero.jpg</small>
-        </div>
+            <label for="firstName">First Name *</label>
 
-    </section>
-
-
-    <!-- SECTION 2: CONSULTATION -->
-
-    <section class="process-section dark-section">
-
-        <div class="step-number">2</div>
-
-        <div class="process-copy">
-
-            <h2>
-                SCHEDULE A<br>
-                CONSULTATION
-            </h2>
-
-            <a href="#" class="text-link">
-                Schedule Consultation ↗
-            </a>
+            <input
+                type="text"
+                id="firstName"
+                name="firstName"
+                placeholder="Your first name"
+                required
+            >
 
         </div>
 
-        <div class="process-photo">
 
-            <!-- ADD CONSULTATION PHOTO -->
-            <img src="assets/images/consultation.jpg"
-                 alt="Consultation">
+        <!-- LAST NAME -->
 
-            <div class="photo-placeholder">
-                ADD CONSULTATION PHOTO
-            </div>
+        <div class="form-group">
+
+            <label for="lastName">Last Name *</label>
+
+            <input
+                type="text"
+                id="lastName"
+                name="lastName"
+                placeholder="Your last name"
+                required
+            >
 
         </div>
 
-    </section>
+
+        <!-- EMAIL -->
+
+        <div class="form-group">
+
+            <label for="email">Email *</label>
+
+            <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="you@example.com"
+                required
+            >
+
+        </div>
 
 
-    <!-- SECTION 3: LOCATION -->
+        <!-- TYPE OF SHOOT -->
 
-    <section class="process-section light-section">
+        <div class="form-group">
 
-        <div class="step-number">3</div>
+            <label for="shootType">
+                Type of Shoot <span>* REQUIRED</span>
+            </label>
 
-        <div class="process-copy">
+            <select id="shootType" name="shootType" required>
 
-            <h2>
-                FIND YOUR<br>
-                SPACE
-            </h2>
+                <option value="">Select your shoot type</option>
 
-            <p>
-                Choose a setting that brings your vision to life.
+                <option>Portrait Photography</option>
+
+                <option>Birthday Photoshoot</option>
+
+                <option>Graduation Photoshoot</option>
+
+                <option>Fashion / Editorial</option>
+
+                <option>Personal Branding</option>
+
+                <option>Couples Photoshoot</option>
+
+                <option>Maternity</option>
+
+                <option>Creative Concept Shoot</option>
+
+                <option>Other</option>
+
+            </select>
+
+        </div>
+
+
+        <!-- PHONE -->
+
+        <div class="form-group">
+
+            <label for="phone">Phone</label>
+
+            <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="Your phone number"
+            >
+
+        </div>
+
+
+        <!-- MAKEUP -->
+
+        <div class="form-group">
+
+            <label for="makeup">Makeup?</label>
+
+            <select id="makeup" name="makeup">
+
+                <option value="">Select an option</option>
+
+                <option>Yes, I will have a makeup artist.</option>
+
+                <option>No, I will be doing my own makeup.</option>
+
+                <option>I would like makeup recommendations.</option>
+
+                <option>I am interested in booking a makeup artist.</option>
+
+            </select>
+
+        </div>
+
+
+        <!-- LOCATION -->
+
+        <div class="form-group">
+
+            <label for="location">
+                Preferred Shoot Location <span>* REQUIRED</span>
+            </label>
+
+            <select id="location" name="location" required>
+
+                <option value="">Choose your preferred location</option>
+
+                <option>Studio</option>
+
+                <option>Outdoor Location</option>
+
+                <option>Hotel / Airbnb</option>
+
+                <option>Home / Personal Space</option>
+
+                <option>Peerspace Rental</option>
+
+                <option>I'm open to suggestions</option>
+
+            </select>
+
+        </div>
+
+
+        <!-- WHO IS IN THE SESSION -->
+
+        <div class="form-group">
+
+            <label for="session">
+                Who is in this session?
+            </label>
+
+            <textarea
+                id="session"
+                name="session"
+                placeholder="Tell me who will be participating in the shoot..."
+            ></textarea>
+
+        </div>
+
+
+        <!-- POSSIBLE DATES -->
+
+        <div class="form-group">
+
+            <label for="dates">
+                Possible Dates That Can Work
+            </label>
+
+            <textarea
+                id="dates"
+                name="dates"
+                placeholder="List a few dates and times that work for you..."
+            ></textarea>
+
+        </div>
+
+
+        <!-- NOTES -->
+
+        <div class="form-group">
+
+            <label for="notes">
+                Any Notes About the Shoot?
+            </label>
+
+            <p class="field-description">
+                Props, poses, Pinterest board... Feel free to share your ideas!
             </p>
 
-            <a href="#" class="text-link">
-                Find Your Space / Peerspace ↗
-            </a>
-
-        </div>
-
-        <div class="process-photo">
-
-            <!-- ADD LOCATION PHOTO -->
-            <img src="assets/images/your-space.jpg"
-                 alt="Photography location">
-
-            <div class="photo-placeholder">
-                ADD LOCATION PHOTO
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- SECTION 4: SHOOT DAY -->
-
-    <section class="process-section dark-section shoot-section">
-
-        <div class="step-number">4</div>
-
-        <div class="process-copy">
-
-            <h2>
-                TIME TO<br>
-                SHOOT
-            </h2>
-
-            <p class="contract-note">
-                MAKE SURE YOU BRING IN A SIGNED
-                MODEL CONTRACT.
-            </p>
-
-            <a href="#" class="mint-button">
-                FILL OUT CONTRACT
-            </a>
+            <textarea
+                id="notes"
+                name="notes"
+                placeholder="Tell me about your vision, inspiration, props, poses, outfits, or Pinterest boards..."
+            ></textarea>
 
         </div>
 
 
-        <div class="shoot-gallery">
+        <!-- VIBE -->
 
-            <div class="small-photo">
-                <img src="assets/images/shoot-01.jpg"
-                     alt="Portrait photograph">
-                <div class="photo-placeholder">PHOTO 1</div>
-            </div>
+        <div class="form-group">
 
-            <div class="small-photo">
-                <img src="assets/images/shoot-02.jpg"
-                     alt="Portrait photograph">
-                <div class="photo-placeholder">PHOTO 2</div>
-            </div>
-
-            <div class="small-photo">
-                <img src="assets/images/shoot-03.jpg"
-                     alt="Portrait photograph">
-                <div class="photo-placeholder">PHOTO 3</div>
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- FINAL BOOKING SECTION -->
-
-    <section class="final-cta">
-
-        <h2>
-            LET'S CREATE SOMETHING
-            <br>
-            TIMELESS.
-        </h2>
-
-        <a href="#" class="mint-button">
-            BOOK NOW
-        </a>
-
-        <a href="portfolio.html" class="text-link">
-            VIEW THE PORTFOLIO ↗
+            <label for="vibe">
+                Vibe / Atmosphere <
