@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pre-Shoot Questionnaire | Poux Productions</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header class="site-header">
+  <a class="logo" href="index.html">POUX <span>PRODUCTIONS</span></a>
+
+  <nav class="main-nav">
+    <a href="index.html">HOME</a>
+    <a href="portfolio.html">PORTFOLIO</a>
+    <a href="questionnaire.html">BOOK A SHOOT</a>
+  </nav>
+
+  <a class="button button-small" href="questionnaire.html">BOOK NOW</a>
+</header>
+
+<section class="page-intro">
+  <p class="eyebrow">LET'S GET CREATIVE</p>
+  <h1>PRE-SHOOT <span>QUESTIONNAIRE.</span></h1>
+  <p>
+    Tell me a little about yourself and the vision you have for your session.
+    The more details, the better!
+  </p>
+</section>
+
+<section class="form-section">
+
+  <div class="form-intro">
+    <p class="eyebrow">01 / YOUR DETAILS</p>
+    <h2>LET'S GET TO <span>KNOW YOU.</span></h2>
+    <p>Fields marked with * are required.</p>
+  </div>
+
+  <form id="shootForm">
+
+    <div class="form-grid">
+
+      <div class="form-field">
+        <label for="firstName">FIRST NAME *</label>
+        <input type="text" id="firstName" name="firstName" required>
+      </div>
+
+      <div class="form-field">
+        <label for="lastName">LAST NAME *</label>
+        <input type="text" id="lastName" name="lastName" required>
+      </div>
+
+      <div class="form-field">
+        <label for="email">EMAIL *</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+
+      <div class="form-field">
+        <label for="phone">PHONE NUMBER</label>
+        <input type="tel" id="phone" name="phone">
+      </div>
+
+      <div class="form-field full">
+        <label for="shootType">TYPE OF SHOOT *</label>
+        <select id="shootType" name="shootType" required>
+          <option value="">Select a shoot type</option>
+          <option>Portrait</option>
+          <option>Graduation</option>
+          <option>Birthday</option>
+          <option>Couples</option>
+          <option>Family</option>
+          <option>Fashion</option>
+          <option>Creative / Editorial</option>
+          <option>Branding</option>
+          <option>Event</option>
+          <option>Other</option>
+        </select>
+      </div>
+
+      <div class="form-field">
+        <label for="makeup">WILL YOU NEED MAKEUP?</label>
+        <select id="makeup" name="makeup">
+          <option value="">Select an option</option>
+          <option>Yes</option>
+          <option>No</option>
+          <option>Maybe / I need more information</option>
+        </select>
+      </div>
+
+      <div class="form-field">
+        <label for="location">PREFERRED SHOOT LOCATION *</label>
+        <input
+          type="text"
+          id="location"
+          name="location"
+          placeholder="Studio, outdoor, city, etc."
+          required
+        >
+      </div>
+
+      <div class="form-field full">
+        <label for="sessionPeople">WHO IS IN THIS SESSION?</label>
+        <input
+          type="text"
+          id="sessionPeople"
+          name="sessionPeople"
+          placeholder="Just me, me and my partner, family, etc."
+        >
+      </div>
+
+      <div class="form-field full">
+        <label for="dates">POSSIBLE DATES THAT WORK FOR YOU</label>
+        <textarea
+          id="dates"
+          name="dates"
+          placeholder="List a few dates or days of the week that work for you."
+        ></textarea>
+      </div>
+
+      <div class="form-field full">
+        <label for="vibe">VIBE / ATMOSPHERE *</label>
+        <select id="vibe" name="vibe" required>
+          <option value="">Choose your vibe</option>
+          <option>Soft & Natural</option>
+          <option>Dark & Moody</option>
+          <option>Editorial / High Fashion</option>
+          <option>Fun & Playful</option>
+          <option>Romantic</option>
+          <option>Minimalist</option>
+          <option>Vintage / Film Inspired</option>
+          <option>Bold & Colorful</option>
+          <option>Not Sure Yet</option>
+        </select>
+      </div>
+
+      <div class="form-field full">
+        <label for="notes">ANY NOTES ABOUT YOUR SHOOT?</label>
+        <textarea
+          id="notes"
+          name="notes"
+          placeholder="Props, poses, outfits, Pinterest boards, inspiration, or anything else you want me to know..."
+        ></textarea>
+      </div>
+
+    </div>
+
+    <div class="form-actions">
+      <button type="submit" class="button">SUBMIT QUESTIONNAIRE ↗</button>
+      <a href="#" class="button">PUT TIME ON MY CALENDAR ↗</a>
+    </div>
+
+    <p id="formMessage" class="form-message"></p>
+
+  </form>
+
+  <div style="margin-top:45px;">
+    <p class="eyebrow">THANK YOU FOR YOUR INTEREST</p>
+    <a href="index.html" class="text-link">← BACK TO MAIN SITE</a>
+  </div>
+
+</section>
+
+<footer class="site-footer">
+  <a class="logo" href="index.html">POUX <span>PRODUCTIONS</span></a>
+  <p>© <span id="year"></span> Poux Productions. All rights reserved.</p>
+  <a href="portfolio.html">PORTFOLIO</a>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
