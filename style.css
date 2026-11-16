@@ -1,471 +1,576 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Oswald:wght@200;300;400&display=swap');
+/* ==============================
+   POUX PRODUCTIONS
+   Main Website Styles
+================================= */
 
 :root {
-    --black: #050505;
-    --white: #f7f7f4;
-    --mint: #d8f8ce;
+  --black: #080909;
+  --dark: #111313;
+  --gray: #a5aaa8;
+  --white: #f5f5f0;
+  --mint: #b9e8d7;
+  --mint-dark: #8fcbb5;
+  --border: rgba(255,255,255,0.14);
 }
 
 * {
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-    margin: 0;
-    background: var(--black);
-    color: var(--white);
-    font-family: 'DM Sans', Arial, sans-serif;
+  background: var(--black);
+  color: var(--white);
+  font-family: 'DM Sans', sans-serif;
+  line-height: 1.6;
 }
 
 a {
-    color: inherit;
-    text-decoration: none;
+  color: inherit;
+  text-decoration: none;
 }
 
+img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+h1, h2, h3, .logo {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 500;
+  line-height: 1.05;
+}
+
+h1 {
+  font-size: clamp(3.5rem, 9vw, 8rem);
+  letter-spacing: -3px;
+}
+
+h2 {
+  font-size: clamp(2.8rem, 6vw, 5.5rem);
+  letter-spacing: -2px;
+}
+
+h3 {
+  font-size: 1.8rem;
+}
+
+h1 span,
+h2 span {
+  color: var(--mint);
+}
+
+p {
+  color: var(--gray);
+}
+
+.eyebrow {
+  color: var(--mint);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  margin-bottom: 22px;
+}
 
 /* HEADER */
 
 .site-header {
-    min-height: 112px;
-    padding: 22px 5%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: white;
-    color: #171717;
+  min-height: 90px;
+  padding: 20px 6%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  border-bottom: 1px solid var(--border);
 }
 
-.wordmark {
-    text-align: center;
-    font-size: 1.6rem;
-    font-weight: 700;
-    letter-spacing: .22em;
+.logo {
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+  color: var(--white);
 }
 
-.wordmark span {
-    display: block;
-    font-size: .55rem;
-    letter-spacing: .28em;
-    margin-top: 6px;
+.logo span {
+  display: block;
+  color: var(--mint);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.55rem;
+  font-weight: 700;
+  letter-spacing: 5px;
 }
 
 .main-nav {
-    display: flex;
-    gap: 28px;
-    font-size: .75rem;
-    letter-spacing: .13em;
+  display: flex;
+  align-items: center;
+  gap: 35px;
 }
 
-.menu-toggle {
-    display: none;
+.main-nav a,
+.site-footer > a:last-child {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  transition: color 0.3s;
 }
 
+.main-nav a:hover,
+.site-footer > a:last-child:hover {
+  color: var(--mint);
+}
+
+/* BUTTONS */
+
+.button {
+  display: inline-block;
+  background: var(--mint);
+  color: var(--black);
+  padding: 15px 25px;
+  border-radius: 50px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 1.3px;
+  transition: 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.button:hover {
+  background: var(--white);
+  transform: translateY(-3px);
+}
+
+.button-small {
+  padding: 12px 20px;
+}
+
+/* HERO */
+
+.hero {
+  min-height: 690px;
+  padding: 80px 6%;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: 55px;
+}
+
+.hero-copy {
+  max-width: 700px;
+}
+
+.hero-description {
+  max-width: 420px;
+  margin: 30px 0;
+  font-size: 1rem;
+}
+
+.hero-image {
+  height: 540px;
+}
+
+/* IMAGE PLACEHOLDERS */
+
+.image-placeholder {
+  position: relative;
+  background: #202525;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-placeholder img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+.image-placeholder span {
+  color: #737d79;
+  font-size: 0.7rem;
+  letter-spacing: 3px;
+  font-weight: 700;
+  z-index: 1;
+}
 
 /* GENERAL SECTIONS */
 
-.dark-section {
-    background: var(--black);
-    color: white;
+.section-padding {
+  padding: 110px 6%;
 }
-
-.light-section {
-    background: #e9e9e5;
-    color: #111;
-}
-
-
-/* NUMBERED SECTIONS */
-
-.step-number {
-    position: absolute;
-    top: 16px;
-    left: 4%;
-    font-family: 'Oswald', sans-serif;
-    font-weight: 200;
-    font-size: 5rem;
-}
-
-
-/* BOOKING SECTION */
 
 .intro {
-    min-height: 360px;
-    position: relative;
-    padding: 72px 7%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  text-align: center;
+  background: var(--dark);
 }
 
-.button-stack {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 42px;
-    width: min(100%, 620px);
+.intro h2 {
+  margin-bottom: 25px;
 }
 
-
-/* MINT BUTTONS */
-
-.mint-button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    background: var(--mint);
-    color: black;
-    border-radius: 15px;
-    padding: 19px 34px;
-    min-height: 72px;
-    font-size: 1.4rem;
-    font-weight: 700;
-    text-align: center;
-    transition: .3s;
+.intro > p:last-child {
+  max-width: 560px;
+  margin: 0 auto;
 }
 
-.mint-button:hover {
-    transform: translateY(-3px);
-    background: #c8f0bd;
+/* PROCESS */
+
+.process > h2 {
+  margin-bottom: 55px;
 }
 
-.wide-button {
-    width: 100%;
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
 }
 
-
-/* PHOTO AREAS */
-
-.feature-photo {
-    height: 680px;
-    position: relative;
-    background: #303030;
+.card-image {
+  height: 370px;
+  margin-bottom: 25px;
 }
 
-.feature-photo img,
-.process-photo img,
-.small-photo img,
-.portfolio-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
+.step-number {
+  color: var(--mint);
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
 }
 
-.photo-placeholder {
-    display: none;
-    width: 100%;
-    height: 100%;
-    min-height: 240px;
-    place-items: center;
-    text-align: center;
-    padding: 20px;
-    background: linear-gradient(135deg, #292929, #555);
-    color: white;
-    font-size: .9rem;
-    letter-spacing: .12em;
+.process-card h3 {
+  margin-bottom: 15px;
 }
 
-
-/* PROCESS SECTIONS */
-
-.process-section {
-    min-height: 500px;
-    position: relative;
-    padding: 105px 7% 70px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 5%;
-    align-items: center;
+.process-card > p:not(.step-number) {
+  margin-bottom: 20px;
 }
-
-.process-copy {
-    text-align: center;
-}
-
-.process-copy h2 {
-    font-family: 'Oswald', sans-serif;
-    font-weight: 300;
-    font-size: 4rem;
-    line-height: 1.08;
-}
-
-.process-photo {
-    height: 390px;
-    background: #333;
-}
-
-.process-copy p {
-    line-height: 1.7;
-}
-
-
-/* TEXT LINKS */
 
 .text-link {
-    display: inline-block;
-    margin-top: 14px;
-    padding-bottom: 7px;
-    border-bottom: 1px solid currentColor;
+  color: var(--mint);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 1px;
 }
-
 
 /* CONTRACT SECTION */
 
-.shoot-section {
-    grid-template-columns: .8fr 1.2fr;
+.contract-section {
+  background: var(--dark);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 70px;
 }
 
-.contract-note {
-    font-size: .8rem;
-    letter-spacing: .12em;
-    font-weight: 600;
-    margin: 28px 0;
+.contract-section p:not(.eyebrow) {
+  margin: 25px 0;
 }
 
-
-/* SHOOT PHOTO GALLERY */
-
-.shoot-gallery {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 12px;
+.contract-image {
+  height: 480px;
 }
 
-.small-photo {
-    height: 220px;
-    background: #333;
+/* GALLERY PREVIEW */
+
+.gallery-preview {
+  text-align: center;
 }
 
-.small-photo:first-child {
-    grid-row: span 2;
-    height: 452px;
+.gallery-preview h2 {
+  margin-bottom: 45px;
 }
 
+.preview-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-bottom: 45px;
+}
 
-/* FINAL BOOKING */
+.preview-image {
+  height: 390px;
+}
+
+/* FINAL CTA */
 
 .final-cta {
-    text-align: center;
-    padding: 100px 20px;
-    background: #111;
+  text-align: center;
+  padding: 120px 6%;
+  background: var(--mint);
+  color: var(--black);
+}
+
+.final-cta .eyebrow {
+  color: var(--black);
 }
 
 .final-cta h2 {
-    font-family: 'Oswald', sans-serif;
-    font-weight: 300;
-    font-size: 3.5rem;
+  font-size: clamp(4rem, 10vw, 8rem);
+  margin-bottom: 35px;
 }
 
-.final-cta .text-link {
-    display: table;
-    margin: 25px auto;
+.final-cta h2 span {
+  color: var(--black);
+  -webkit-text-stroke: 1px var(--black);
 }
 
+.final-cta .button {
+  background: var(--black);
+  color: var(--mint);
+}
 
 /* FOOTER */
 
 .site-footer {
-    padding: 30px 5%;
-    display: flex;
-    justify-content: space-between;
-    gap: 18px;
-    color: #aaa;
-    font-size: .7rem;
-    letter-spacing: .13em;
+  padding: 40px 6%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  border-top: 1px solid var(--border);
 }
 
-.site-footer a {
-    color: white;
-    font-weight: 700;
+.site-footer p {
+  font-size: 0.75rem;
 }
 
+/* PAGE INTRO */
 
-/* PORTFOLIO PAGES */
-
-.page-heading {
-    padding: 100px 8%;
-    text-align: center;
+.page-intro {
+  padding: 100px 6% 65px;
+  text-align: center;
 }
 
-.page-heading h1 {
-    font-family: 'Oswald', sans-serif;
-    font-size: 8rem;
-    font-weight: 200;
-    margin: 20px 0;
+.page-intro h1 {
+  font-size: clamp(3.5rem, 8vw, 7rem);
 }
 
-.eyebrow {
-    letter-spacing: .25em;
-    font-size: .7rem;
+.page-intro p {
+  max-width: 550px;
+  margin: 25px auto 0;
 }
 
-.year-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1px;
-    background: #555;
+/* PORTFOLIO */
+
+.year-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding: 10px 6% 55px;
 }
 
-.year-card {
-    min-height: 340px;
-    background: #111;
-    padding: 34px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    transition: .3s;
+.year-links a {
+  border: 1px solid var(--border);
+  border-radius: 40px;
+  padding: 12px 25px;
+  font-size: 0.75rem;
+  letter-spacing: 2px;
 }
 
-.year-card:hover {
-    background: #292929;
+.year-links a:hover,
+.year-links a.active {
+  color: var(--black);
+  background: var(--mint);
+  border-color: var(--mint);
 }
-
-.year-card strong {
-    font-family: 'Oswald', sans-serif;
-    font-size: 7rem;
-    font-weight: 200;
-}
-
-
-/* YEARLY PHOTO GALLERIES */
 
 .portfolio-grid {
-    padding: 28px 4% 70px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 18px;
+  padding: 0 6% 100px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
 }
 
 .portfolio-image {
-    height: 550px;
-    background: #333;
+  height: 540px;
 }
 
+.portfolio-image img {
+  transition: transform 0.6s ease;
+}
 
-/* YEAR NAVIGATION */
+.portfolio-image:hover img {
+  transform: scale(1.04);
+}
 
-.archive-navigation {
-    padding: 0 5% 70px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+/* QUESTIONNAIRE */
+
+.form-section {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 50px 6% 110px;
+}
+
+.form-intro {
+  margin-bottom: 45px;
+}
+
+.form-intro h2 {
+  font-size: clamp(2.8rem, 6vw, 5rem);
+  margin-bottom: 20px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form-field.full {
+  grid-column: 1 / -1;
+}
+
+.form-field label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: var(--white);
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+  width: 100%;
+  padding: 16px;
+  background: #171b1a;
+  color: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 0.9rem;
+}
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+  outline: 1px solid var(--mint);
+}
+
+.form-field textarea {
+  min-height: 130px;
+  resize: vertical;
+}
+
+.form-field select option {
+  background: var(--dark);
+}
+
+.form-actions {
+  margin-top: 35px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.form-message {
+  margin-top: 20px;
+  color: var(--mint);
+}
+
+/* MOBILE */
+
+@media (max-width: 850px) {
+  .hero {
+    grid-template-columns: 1fr;
+    padding-top: 65px;
+  }
+
+  .hero-image {
+    height: 450px;
+  }
+
+  .process-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .contract-section {
+    grid-template-columns: 1fr;
+  }
+
+  .main-nav {
+    gap: 15px;
+  }
+}
+
+@media (max-width: 600px) {
+  .site-header {
     flex-wrap: wrap;
-    gap: 20px;
-}
+    padding: 20px 5%;
+  }
 
-.archive-navigation > div {
-    display: flex;
-    gap: 10px;
-}
+  .logo {
+    font-size: 1.5rem;
+  }
 
-.year-chip {
-    border: 1px solid #777;
-    padding: 10px 15px;
-}
+  .main-nav {
+    order: 3;
+    width: 100%;
+    justify-content: space-between;
+  }
 
-.year-chip.active {
-    background: var(--mint);
-    color: black;
-}
+  .main-nav a {
+    font-size: 0.62rem;
+  }
 
+  .site-header > .button {
+    font-size: 0.6rem;
+    padding: 11px 15px;
+  }
 
-/* MOBILE RESPONSIVE */
+  .hero {
+    padding: 60px 5%;
+    gap: 35px;
+  }
 
-@media (max-width: 720px) {
+  .hero-image {
+    height: 380px;
+  }
 
-    .site-header {
-        min-height: 90px;
-        justify-content: center;
-    }
+  .section-padding {
+    padding: 75px 5%;
+  }
 
-    .wordmark {
-        font-size: 1rem;
-    }
+  .process-grid,
+  .preview-grid,
+  .portfolio-grid,
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
 
-    .menu-toggle {
-        display: block;
-        position: absolute;
-        left: 16px;
-        background: none;
-        border: none;
-        font-size: 2rem;
-        color: black;
-    }
+  .card-image,
+  .preview-image {
+    height: 350px;
+  }
 
-    .main-nav {
-        display: none;
-        position: absolute;
-        z-index: 5;
-        top: 90px;
-        left: 0;
-        right: 0;
-        padding: 22px;
-        background: white;
-        flex-direction: column;
-        text-align: center;
-    }
+  .portfolio-image {
+    height: 420px;
+  }
 
-    .main-nav.open {
-        display: flex;
-    }
+  .contract-image {
+    height: 350px;
+  }
 
-    .intro {
-        min-height: 330px;
-        padding: 85px 7%;
-    }
+  .form-field.full {
+    grid-column: auto;
+  }
 
-    .mint-button {
-        min-height: 62px;
-        font-size: 1.1rem;
-    }
-
-    .feature-photo {
-        height: 450px;
-    }
-
-    .process-section,
-    .shoot-section {
-        grid-template-columns: 1fr;
-        padding: 100px 7% 55px;
-        gap: 30px;
-    }
-
-    .process-copy h2 {
-        font-size: 3rem;
-    }
-
-    .process-photo {
-        height: 330px;
-    }
-
-    .year-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .year-card {
-        min-height: 230px;
-    }
-
-    .portfolio-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .portfolio-image {
-        height: 450px;
-    }
-
-    .page-heading h1 {
-        font-size: 5rem;
-    }
-
-    .site-footer {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
+  .site-footer {
+    flex-direction: column;
+    text-align: center;
+  }
 }
