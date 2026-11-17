@@ -1,65 +1,45 @@
-// POUX PRODUCTIONS JAVASCRIPT
+document.addEventListener("DOMContentLoaded", function () {
 
-// Automatically update copyright year
-const yearElement = document.getElementById("year");
+  const menuButton = document.querySelector(".menu-toggle");
+  const navigation = document.querySelector(".nav-links");
 
-if (yearElement) {
-  yearElement.textContent = new Date().getFullYear();
-}
+  if (menuButton && navigation) {
+    menuButton.addEventListener("click", function () {
+      const isOpen = navigation.classList.toggle("open");
+      menuButton.setAttribute("aria-expanded", isOpen);
+    });
+  }
 
-// Pre-shoot questionnaire
-const questionnaire = document.getElementById("shootForm");
+  // CHANGE THIS TO YOUR REAL BUSINESS EMAIL.
+  const bookingEmail = "YOUR-EMAIL@example.com";
 
-if (questionnaire) {
-  questionnaire.addEventListener("submit", function(event) {
-    event.preventDefault();
+  document.querySelectorAll("form[data-mailto]").forEach(form => {
 
-    const formData = new FormData(questionnaire);
+    form.addEventListener("submit", function(event) {
+      event.preventDefault();
 
-    const firstName = formData.get("firstName");
-    const lastName = formData.get("lastName");
-    const email = formData.get("email");
-    const shootType = formData.get("shootType");
-    const phone = formData.get("phone");
-    const makeup = formData.get("makeup");
-    const location = formData.get("location");
-    const sessionPeople = formData.get("sessionPeople");
-    const dates = formData.get("dates");
-    const notes = formData.get("notes");
-    const vibe = formData.get("vibe");
+      if (bookingEmail === "YOUR-EMAIL@example.com") {
+        alert("Please add your real email address in script.js first.");
+        return;
+      }
 
-    const message = `
-NEW POUX PRODUCTIONS SHOOT INQUIRY
+      const formData = new FormData(form);
+      let message = "";
 
-Name: ${firstName} ${lastName}
-Email: ${email}
-Phone: ${phone}
+      for (const [key, value] of formData.entries()) {
+        message += `${key}: ${value}\n`;
+      }
 
-Type of Shoot: ${shootType}
-Makeup: ${makeup}
-Preferred Location: ${location}
-Who Is in the Session: ${sessionPeople}
-Possible Dates: ${dates}
-Vibe / Atmosphere: ${vibe}
+      const subject = encodeURIComponent(
+        form.dataset.subject || "Poux Productions Inquiry"
+      );
 
-Additional Notes:
-${notes}
-    `;
+      const body = encodeURIComponent(message);
 
-    // CHANGE THIS TO YOUR BUSINESS EMAIL
-    const businessEmail = "YOUR-EMAIL@example.com";
+      window.location.href =
+        `mailto:${bookingEmail}?subject=${subject}&body=${body}`;
+    });
 
-    const subject = encodeURIComponent("New Photography Inquiry");
-    const body = encodeURIComponent(message);
-
-    window.location.href =
-      `mailto:${businessEmail}?subject=${subject}&body=${body}`;
-
-    const messageElement = document.getElementById("formMessage");
-
-    if (messageElement) {
-      messageElement.textContent =
-        "Your email app should open with your inquiry ready to send.";
-    }
   });
-}
+
+});
