@@ -2,174 +2,260 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Pre-Shoot Questionnaire | Poux Productions</title>
   <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
 
 <header class="site-header">
-  <a class="logo" href="index.html">POUX <span>PRODUCTIONS</span></a>
+  <div class="header-inner">
+    <a class="brand" href="index.html">
+      <strong>POUX</strong><span>PRODUCTIONS</span>
+    </a>
 
-  <nav class="main-nav">
-    <a href="index.html">HOME</a>
-    <a href="portfolio.html">PORTFOLIO</a>
-    <a href="questionnaire.html">BOOK A SHOOT</a>
-  </nav>
+    <button class="menu-toggle" aria-expanded="false">MENU ☰</button>
 
-  <a class="button button-small" href="questionnaire.html">BOOK NOW</a>
+    <nav class="nav-links">
+      <a href="index.html">HOME</a>
+      <a href="questionnaire.html">BOOKING</a>
+      <a href="contact.html">CONTACT</a>
+      <a class="nav-portfolio" href="https://gabbydftba.wixsite.com/photos"
+         target="_blank" rel="noopener noreferrer">PORTFOLIO ↗</a>
+    </nav>
+  </div>
 </header>
 
-<section class="page-intro">
-  <p class="eyebrow">LET'S GET CREATIVE</p>
-  <h1>PRE-SHOOT <span>QUESTIONNAIRE.</span></h1>
-  <p>
-    Tell me a little about yourself and the vision you have for your session.
-    The more details, the better!
-  </p>
+<main>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="eyebrow">LET'S PLAN YOUR SESSION</div>
+    <h1>Pre-Shoot<br>Questionnaire</h1>
+    <p>
+      Tell us about yourself, your ideas,
+      and what you want your photography session to feel like.
+    </p>
+  </div>
 </section>
 
-<section class="form-section">
+<section class="section">
+  <div class="container form-wrap">
 
-  <div class="form-intro">
-    <p class="eyebrow">01 / YOUR DETAILS</p>
-    <h2>LET'S GET TO <span>KNOW YOU.</span></h2>
-    <p>Fields marked with * are required.</p>
+    <form class="form-panel" data-mailto
+          data-subject="Poux Productions Pre-Shoot Questionnaire">
+
+      <h2>About You</h2>
+
+      <div class="form-grid">
+
+        <div class="field">
+          <label>First Name *</label>
+          <input name="First Name" required>
+        </div>
+
+        <div class="field">
+          <label>Last Name *</label>
+          <input name="Last Name" required>
+        </div>
+
+        <div class="field">
+          <label>Email Address *</label>
+          <input type="email" name="Email" required>
+        </div>
+
+        <div class="field">
+          <label>Phone Number</label>
+          <input type="tel" name="Phone">
+        </div>
+
+        <div class="field full">
+          <label>
+            Who is in this session? Possible dates that can work?
+            Any notes about the shoot?
+          </label>
+          <textarea name="Session Details"></textarea>
+        </div>
+
+        <div class="field full">
+          <label>
+            Props, poses, Pinterest boards, or inspiration?
+            Feel free to share your ideas!
+          </label>
+          <textarea name="Ideas and Inspiration"></textarea>
+        </div>
+
+      </div>
+
+      <fieldset>
+        <legend>Type of Shoot</legend>
+
+        <div class="choice-list">
+          <label class="choice">
+            <input type="checkbox" name="Shoot Type" value="Boudoir">
+            Boudoir
+          </label>
+
+          <label class="choice">
+            <input type="checkbox" name="Shoot Type" value="Brand">
+            Brand
+          </label>
+
+          <label class="choice">
+            <input type="checkbox" name="Shoot Type" value="Maternity">
+            Maternity
+          </label>
+
+          <label class="choice">
+            <input type="checkbox" name="Shoot Type" value="Portrait">
+            Portrait
+          </label>
+
+          <label class="choice">
+            <input type="checkbox" name="Shoot Type" value="Couples / Elopement">
+            Couples / Elopement
+          </label>
+
+          <label class="choice">
+            <input type="checkbox" name="Shoot Type" value="Family">
+            Family
+          </label>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Preferred Shoot Location</legend>
+
+        <div class="choice-list">
+          <label class="choice">
+            <input type="checkbox" name="Location" value="Home">
+            Home
+          </label>
+
+          <label class="choice">
+            <input type="checkbox" name="Location" value="Studio">
+            Studio
+          </label>
+
+          <label class="choice">
+            <input type="checkbox" name="Location" value="Outdoor">
+            Outdoor
+          </label>
+
+          <label class="choice">
+            <input type="checkbox" name="Location" value="I will provide">
+            I will provide
+          </label>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Makeup / Look</legend>
+
+        <div class="choice-list">
+          <label class="choice">
+            <input type="checkbox" name="Makeup" value="Dark Moody Dramatic">
+            Dark, Moody, Dramatic
+          </label>
+
+          <label class="choice">
+            <input type="checkbox" name="Makeup" value="Light Pastel Airy">
+            Light, Pastel, Airy
+          </label>
+
+          <label class="choice">
+            <input type="checkbox" name="Makeup" value="Natural Minimal">
+            Natural / Minimal
+          </label>
+
+          <label class="choice">
+            <input type="checkbox" name="Makeup" value="Undecided">
+            Haven't decided yet
+          </label>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Vibe / Atmosphere</legend>
+
+        <div class="choice-list">
+          <label class="choice">
+            <input type="checkbox" name="Vibe" value="Bright and Fun">
+            Bright & Fun
+          </label>
+
+          <label class="choice">
+            <input type="checkbox" name="Vibe" value="Dark and Moody">
+            Dark & Moody
+          </label>
+
+          <label class="choice">
+            <input type="checkbox" name="Vibe" value="Deep and Romantic">
+            Deep & Romantic
+          </label>
+
+          <label class="choice">
+            <input type="checkbox" name="Vibe" value="Weird and Chaotic">
+            Weird & Chaotic
+          </label>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Comfort Level</legend>
+
+        <div class="choice-list">
+
+          <label class="choice">
+            <input type="radio" name="Comfort Level" value="Conservative">
+            Conservative
+          </label>
+
+          <label class="choice">
+            <input type="radio" name="Comfort Level" value="Partial Nudity">
+            Partial Nudity
+          </label>
+
+          <label class="choice">
+            <input type="radio" name="Comfort Level" value="Illusion of Nudity">
+            Illusion of Nudity
+          </label>
+
+          <label class="choice">
+            <input type="radio" name="Comfort Level" value="Tastefully Done Full Nudity">
+            Tastefully Done Full Nudity
+          </label>
+
+          <label class="choice">
+            <input type="radio" name="Comfort Level" value="Comfortable With Anything">
+            Comfortable With Anything
+          </label>
+
+        </div>
+      </fieldset>
+
+      <button class="button" type="submit">
+        SUBMIT QUESTIONNAIRE
+      </button>
+
+      <p class="note">
+        Submitting opens your email application with your answers prepared.
+      </p>
+
+    </form>
+
   </div>
-
-  <form id="shootForm">
-
-    <div class="form-grid">
-
-      <div class="form-field">
-        <label for="firstName">FIRST NAME *</label>
-        <input type="text" id="firstName" name="firstName" required>
-      </div>
-
-      <div class="form-field">
-        <label for="lastName">LAST NAME *</label>
-        <input type="text" id="lastName" name="lastName" required>
-      </div>
-
-      <div class="form-field">
-        <label for="email">EMAIL *</label>
-        <input type="email" id="email" name="email" required>
-      </div>
-
-      <div class="form-field">
-        <label for="phone">PHONE NUMBER</label>
-        <input type="tel" id="phone" name="phone">
-      </div>
-
-      <div class="form-field full">
-        <label for="shootType">TYPE OF SHOOT *</label>
-        <select id="shootType" name="shootType" required>
-          <option value="">Select a shoot type</option>
-          <option>Portrait</option>
-          <option>Graduation</option>
-          <option>Birthday</option>
-          <option>Couples</option>
-          <option>Family</option>
-          <option>Fashion</option>
-          <option>Creative / Editorial</option>
-          <option>Branding</option>
-          <option>Event</option>
-          <option>Other</option>
-        </select>
-      </div>
-
-      <div class="form-field">
-        <label for="makeup">WILL YOU NEED MAKEUP?</label>
-        <select id="makeup" name="makeup">
-          <option value="">Select an option</option>
-          <option>Yes</option>
-          <option>No</option>
-          <option>Maybe / I need more information</option>
-        </select>
-      </div>
-
-      <div class="form-field">
-        <label for="location">PREFERRED SHOOT LOCATION *</label>
-        <input
-          type="text"
-          id="location"
-          name="location"
-          placeholder="Studio, outdoor, city, etc."
-          required
-        >
-      </div>
-
-      <div class="form-field full">
-        <label for="sessionPeople">WHO IS IN THIS SESSION?</label>
-        <input
-          type="text"
-          id="sessionPeople"
-          name="sessionPeople"
-          placeholder="Just me, me and my partner, family, etc."
-        >
-      </div>
-
-      <div class="form-field full">
-        <label for="dates">POSSIBLE DATES THAT WORK FOR YOU</label>
-        <textarea
-          id="dates"
-          name="dates"
-          placeholder="List a few dates or days of the week that work for you."
-        ></textarea>
-      </div>
-
-      <div class="form-field full">
-        <label for="vibe">VIBE / ATMOSPHERE *</label>
-        <select id="vibe" name="vibe" required>
-          <option value="">Choose your vibe</option>
-          <option>Soft & Natural</option>
-          <option>Dark & Moody</option>
-          <option>Editorial / High Fashion</option>
-          <option>Fun & Playful</option>
-          <option>Romantic</option>
-          <option>Minimalist</option>
-          <option>Vintage / Film Inspired</option>
-          <option>Bold & Colorful</option>
-          <option>Not Sure Yet</option>
-        </select>
-      </div>
-
-      <div class="form-field full">
-        <label for="notes">ANY NOTES ABOUT YOUR SHOOT?</label>
-        <textarea
-          id="notes"
-          name="notes"
-          placeholder="Props, poses, outfits, Pinterest boards, inspiration, or anything else you want me to know..."
-        ></textarea>
-      </div>
-
-    </div>
-
-    <div class="form-actions">
-      <button type="submit" class="button">SUBMIT QUESTIONNAIRE ↗</button>
-      <a href="#" class="button">PUT TIME ON MY CALENDAR ↗</a>
-    </div>
-
-    <p id="formMessage" class="form-message"></p>
-
-  </form>
-
-  <div style="margin-top:45px;">
-    <p class="eyebrow">THANK YOU FOR YOUR INTEREST</p>
-    <a href="index.html" class="text-link">← BACK TO MAIN SITE</a>
-  </div>
-
 </section>
+
+</main>
 
 <footer class="site-footer">
-  <a class="logo" href="index.html">POUX <span>PRODUCTIONS</span></a>
-  <p>© <span id="year"></span> Poux Productions. All rights reserved.</p>
-  <a href="portfolio.html">PORTFOLIO</a>
+  <div class="footer-inner">
+    <span>© 2026 POUX PRODUCTIONS</span>
+    <a href="index.html">HOME</a>
+  </div>
 </footer>
 
 <script src="script.js"></script>
-
 </body>
 </html>
